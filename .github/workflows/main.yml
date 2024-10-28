@@ -2,10 +2,10 @@ name: A workflow for my Hello World file
 on: push
 jobs:
   build:
-    if: ${{ github.ref == 'refs/heads/master' }}
+    if: github.ref == 'refs/heads/master' 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Run main.py
       run: python3 main.py
      
