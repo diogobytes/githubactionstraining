@@ -2,7 +2,7 @@ name: A workflow for my Hello World file
 on: push
 jobs:
   build:
-    if: github.ref == 'refs/heads/master' 
+    if: github.ref == 'refs/heads/main' 
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
