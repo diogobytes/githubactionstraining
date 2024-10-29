@@ -1,7 +1,7 @@
 name: A workflow for my Hello World file
 on: push
 jobs:
-  run-python:
+  prod-check:
     if: ${{github.ref == 'refs/heads/main'}} 
     runs-on: ubuntu-latest
     steps:
