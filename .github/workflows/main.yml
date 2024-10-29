@@ -5,7 +5,7 @@ jobs:
     if: ${{github.ref == 'refs/heads/main'}} 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - run: echo "Deploying to production server $GITHUB_REF"
     - name: Run main.py
       run: python3 $FILE_NAME
