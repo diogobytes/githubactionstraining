@@ -1,2 +1,2 @@
 # githubactionstraining
-![example branch parameter.](https://github.com/mona/special-octo-eureka/actions/workflows/grading.yml/badge.svg?branch=main)
+[![A workflow for my Hello World file](https://github.com/diogobytes/githubactionstraining/actions/workflows/main.yml/badge.svg)](https://github.com/diogobytes/githubactionstraining/actions/workflows/main.yml)
