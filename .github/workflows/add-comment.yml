@@ -4,6 +4,9 @@ on:
     types: [opened]
 jobs:
   comment:
+    permissions:
+      contents: write
+      issues: write
     runs-on: ubuntu-latest
     steps:
     - name: Add comment on new issue
