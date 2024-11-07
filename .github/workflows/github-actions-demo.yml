@@ -6,5 +6,5 @@ jobs:
         steps:
             - name: Triggered event
               run: |
-                echo "Triggered by event: ${{github.event_name }}"
+                echo "Triggered by event: ${{github.event_name }} 😎"
             
