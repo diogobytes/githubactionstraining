@@ -7,4 +7,7 @@ jobs:
             - name: Triggered event
               run: |
                 echo "Triggered by event: ${{github.event_name }} 😎"
+            - name: Runner
+              run: |
+                echo "Job is running in ${{runner.os}} 🐧 "  
             
