@@ -10,4 +10,14 @@ jobs:
             - name: Runner
               run: |
                 echo "Job is running in ${{runner.os}} 🐧 "  
-            
+            - name: Branch name
+              run: |
+                echo "The name of the branch is: ${{github.ref}}"
+            - name: Check repository
+              uses: actions/checkout@v4
+            - run: |
+               echo  "Cloned the repo: ${{github.repository}} 😸"
+            - name: List files in the directory
+              run: |
+                echo "Listing files:"
+                ls ${{github.workspace}}
