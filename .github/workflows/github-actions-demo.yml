@@ -20,4 +20,5 @@ jobs:
             - name: List files in the directory
               run: |
                 echo "Listing files:"
-                ls ${{github.workspace}}
+                cd ${{github.workspace}}
+                ls 
