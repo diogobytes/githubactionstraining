@@ -1,5 +1,9 @@
 name: Matrix example
-on: [workflow_dispatch]
+on: 
+    workflow_dispatch:
+    label:
+        types: 
+        - created
 jobs:
     build-matrix:
         runs-on: ubuntu-latest
