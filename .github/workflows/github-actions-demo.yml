@@ -9,7 +9,7 @@ jobs:
         steps:
             - name: Author
               run: |
-                echo "Github author: ${{github.actor}}"
+                echo "Github author: ${{github.actor}} 🎩"
             - name: Triggered event
               run: |
                 echo "Triggered by event: ${{github.event_name }} 😎"
