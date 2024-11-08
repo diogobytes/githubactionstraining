@@ -1,5 +1,8 @@
 name: "Github actions demo"
-on: push
+on: 
+  push: 
+    branches: 
+      - releases/**
 jobs:
     Explore-Github-Actions:
         runs-on: ubuntu-latest
