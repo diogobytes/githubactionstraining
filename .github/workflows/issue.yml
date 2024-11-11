@@ -1,0 +1,13 @@
+name: Opened Issue
+on:
+  issues:
+    types: opened
+jobs:
+  label_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Comment
+        uses: KeisukeYamashita/create-comment@v1
+        with:
+          number: 1
+          comment: "Welcome to my Github Repo 😎"
