@@ -3,8 +3,10 @@ on:
   
   issues:
     types: opened
-jobs:
+jobs: 
+  
   label_issue:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Create Comment
