@@ -1,6 +1,9 @@
 name: Publish to Docker
 on:
   workflow_dispatch:
+  push:
+    paths: 
+      - '**.py'
 permissions:
   packages: write
   contents: read
