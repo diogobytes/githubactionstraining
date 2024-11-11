@@ -1,5 +1,6 @@
 name: Opened Issue
 on:
+  
   issues:
     types: opened
 jobs:
@@ -11,3 +12,4 @@ jobs:
         with:
           number: 1
           comment: "Welcome to my Github Repo 😎"
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
