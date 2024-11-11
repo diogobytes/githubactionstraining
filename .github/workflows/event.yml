@@ -13,7 +13,7 @@ jobs:
     - name: if_issue
       if: github.event.issue
       run: |
-        echo "An issue with id: ${{github.event.issue.id}} was closed by ${{github.event.issue.user }}. "
+        echo "An issue with id: ${{github.event.issue.id}} was closed by ${{github.event.issue.user.name }}. "
     - name: if_pr
       if: github.event.pull_request
       run: |
