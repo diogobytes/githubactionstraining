@@ -1,8 +1,8 @@
 name: "Github actions demo"
 on: 
   push: 
-     branches-ignore: 
-      - 'main'
+     branches:
+      - '!main'
 jobs:
     Explore-Github-Actions:
         runs-on: ubuntu-latest
