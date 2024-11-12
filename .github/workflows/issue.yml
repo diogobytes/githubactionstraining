@@ -1,17 +1,15 @@
 name: Opened Issue
 on:
-  
   issues:
     types: opened
-jobs: 
-  
-  label_issue:
-    permissions: write-all
+jobs:
+  triage:
+    if: github.event.issue.user.login == 'diogobytes'
     runs-on: ubuntu-latest
     steps:
-      - name: Create Comment
-        uses: KeisukeYamashita/create-comment@v1
-        with:
-          number: 1
-          comment: "Welcome to my Github Repo 😎"
-          token: ${{secrets.GITHUB_TOKEN}}
+      - name: "Comment about changes we can't accept"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
+        run: |
+          gh pr comment $ISSUE --body 'Hello diogobytes'
