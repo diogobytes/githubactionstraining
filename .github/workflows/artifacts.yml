@@ -19,6 +19,7 @@ jobs:
   job_2:
     name: Print the result of job 1 
     needs: job_1
+    if: success()
     runs-on: ubuntu-latest
     steps:
       - name: Download math result for job 1

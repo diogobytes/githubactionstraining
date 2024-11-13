@@ -1,15 +1,15 @@
 name: Opened Issue
 on:
   issues:
-    types: opened
+    types: labeled
 jobs:
-  triage:
-    if: github.event.issue.user.login == 'diogobytes'
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Comment about changes we can't accept"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE: ${{ github.event.issue.html_url }}
-        run: |
-          gh issue comment "${{ github.event.issue.number }}" --body 'Hello diogobytes.'
+    run_if_label_present:
+      if: github.event.label.name == 'hello' 
+      runs-on: ubuntu-latest
+      steps:
+        - name: "Comment about changes we can't accept"
+          env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            ISSUE: ${{ github.event.issue.html_url }}
+          run: |
+            gh issue comment "${{ github.event.issue.number }}" --body 'Hello diogobytes.'
