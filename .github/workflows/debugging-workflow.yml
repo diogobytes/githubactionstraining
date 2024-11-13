@@ -20,5 +20,5 @@ jobs:
           echo "::endgroup::"
       - name: My password
         run: | 
-          MY_PASS=P4ssw0rd
-          echo "::add-mask::$MY_PASS"
+          echo '::add-mask::test'
+          echo This is a test             
