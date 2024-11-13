@@ -20,5 +20,4 @@ jobs:
           echo "::endgroup::"
       - name: My password
         run: | 
-          echo "::add-mask::This is my Github pass: P4ssw0rd"
-          echo "Just kidding"
+          echo "::add-mask::P4ssw0rd"
