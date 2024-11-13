@@ -1,15 +1,13 @@
-name: Opened Issue
+name: Comment when opened
 on:
   issues:
-    types: labeled
+    types:
+      - opened
 jobs:
-    run_if_label_present:
-      if: github.event.label.name == 'hello' 
-      runs-on: ubuntu-latest
-      steps:
-        - name: "Comment about changes we can't accept"
-          env:
-            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            ISSUE: ${{ github.event.issue.html_url }}
-          run: |
-            gh issue comment "${{ github.event.issue.number }}" --body 'Hello diogobytes.'
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh issue comment $ISSUE --body "Thank you for opening this issue!"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
