@@ -1,0 +1,15 @@
+name: Messenger Workflow
+on: [workflow_dispatch]
+jobs:
+  lets-debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug msg
+        run: | 
+          echo "::debug::Hello Debug message"
+      - name: Notice msg
+        run: |
+          echo "::notice::Hello Notice message"
+      - name: Warning msg
+        run: |
+          echo "::warning::Hello Warning message"
