@@ -13,3 +13,12 @@ jobs:
       - name: Warning msg
         run: |
           echo "::warning::Hello Warning message"
+      - name: Group msg
+        run: |
+          echo "::group::My title"
+          echo "Inside the group"
+          echo "::endgroup::"
+      - name: My password
+        run: | 
+          echo "::add-mask::This is my Github pass: P4ssw0rd"
+          echo "Just kidding"
