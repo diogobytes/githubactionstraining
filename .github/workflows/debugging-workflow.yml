@@ -19,5 +19,7 @@ jobs:
           echo "Inside the group"
           echo "::endgroup::"
       - name: My password
+        env: 
+          MY_PASS: P4ssw0rd
         run: | 
-          echo "::add-mask::P4ssw0rd"
+          echo "::add-mask::$MY_PASS"
