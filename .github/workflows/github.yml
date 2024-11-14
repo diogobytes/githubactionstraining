@@ -7,7 +7,7 @@ jobs:
       - name: Set captain america value
         run: |
           echo "captain_america=MARVEL" >> "$GITHUB_ENV"
-      - name: Use the action state value
+      - name: Use the captain america value
         run: | 
           echo $captain_america
       - name: set spiderman output value
@@ -21,3 +21,6 @@ jobs:
         if: success()
         run: | 
           echo "### Everything deployed sucessfully! :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Summary:" >> $GITHUB_STEP_SUMMARY
+          echo "- In this github workflow we output the following values: ${{steps.spider.outputs.spiderman}} and $captain_america"
