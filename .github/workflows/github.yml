@@ -23,4 +23,6 @@ jobs:
           echo "### Everything deployed sucessfully! :rocket:" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Summary:" >> $GITHUB_STEP_SUMMARY
-          echo "- Values: ${{steps.spider.outputs.spiderman}}" >> $GITHUB_STEP_SUMMARY
+          echo "- In this action we printed:" >> $GITHUB_STEP_SUMMARY
+          echo "-  ${{steps.spider.outputs.spiderman}}"
+          echo "- $captain_america"
