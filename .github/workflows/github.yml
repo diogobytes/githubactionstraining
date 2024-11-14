@@ -1,7 +1,7 @@
 name: Learn GITHUB Workflow variables
 on: [workflow_dispatch ]
 jobs:
-  github_env:
+  job1:
     runs-on: ubuntu-latest
     steps:
       - name: Set captain america value
@@ -17,12 +17,15 @@ jobs:
       - name: get spiderman output value
         run: | 
           echo "${{steps.spider.outputs.spiderman}}"
+  Summary: 
+    runs-on: ubuntu-latest
+    needs: [job1]
+    steps:
       - name: Add a summary
-        if: success()
         run: | 
           echo "### Everything deployed sucessfully! :rocket:" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Summary:" >> $GITHUB_STEP_SUMMARY
           echo "- In this action we printed:" >> $GITHUB_STEP_SUMMARY
-          echo "-  ${{steps.spider.outputs.spiderman}}" >> $GITHUB_STEP_SUMMARY
+          echo "-  ${{jobs.job1.steps.spider.outputs.spiderman}}" >> $GITHUB_STEP_SUMMARY
           echo "- $captain_america" >> $GITHUB_STEP_SUMMARY
