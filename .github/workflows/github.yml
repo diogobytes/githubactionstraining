@@ -4,7 +4,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     outputs:
-      spiderman: ${{steps.spider.outptus.spiderman}}
+      spiderman: ${{steps.spider.outputs.spiderman}}
     steps:
       - name: Set captain america value
         run: |
