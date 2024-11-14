@@ -1,0 +1,12 @@
+name: Learn GITHUB Workflow variables
+on: [workflow_dispatch ]
+jobs:
+  github_env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set action state
+        run: |
+          echo "action_state=YELLOW" >> "$GITHUB_ENV"
+      - name: Use the action state value
+        run: | 
+          echo $action_state
