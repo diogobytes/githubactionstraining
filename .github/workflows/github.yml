@@ -27,5 +27,5 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Summary:" >> $GITHUB_STEP_SUMMARY
           echo "- In this action we printed:" >> $GITHUB_STEP_SUMMARY
-          echo "-  ${{jobs.job1.steps.spider.outputs.spiderman}}" >> $GITHUB_STEP_SUMMARY
+          echo "-  ${{needs.job1.outputs.spiderman}}" >> $GITHUB_STEP_SUMMARY
           echo "- $captain_america" >> $GITHUB_STEP_SUMMARY
