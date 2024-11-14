@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Set action state
         run: |
-          echo "action_state=YELLOW" >> "$GITHUB_ENV"
+          echo "captain_america=MARVEL" >> "$GITHUB_ENV"
       - name: Use the action state value
         run: | 
-          echo $action_state
+          echo $captain_america
