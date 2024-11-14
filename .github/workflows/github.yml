@@ -4,9 +4,16 @@ jobs:
   github_env:
     runs-on: ubuntu-latest
     steps:
-      - name: Set action state
+      - name: Set captain america value
         run: |
           echo "captain_america=MARVEL" >> "$GITHUB_ENV"
       - name: Use the action state value
         run: | 
           echo $captain_america
+      - name: set spiderman output value
+        id: spider
+        run: | 
+          echo "spiderman=peter" >> "$GITHUB_OUTPUT"
+      - name: get spiderman output value
+        run: | 
+          echo "${{steps.spider.outputs.spiderman}}"
