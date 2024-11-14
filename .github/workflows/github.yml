@@ -3,6 +3,8 @@ on: [workflow_dispatch ]
 jobs:
   job1:
     runs-on: ubuntu-latest
+    outputs:
+      spiderman: ${{steps.spider.outptus.spiderman}}
     steps:
       - name: Set captain america value
         run: |
@@ -28,4 +30,3 @@ jobs:
           echo "Summary:" >> $GITHUB_STEP_SUMMARY
           echo "- In this action we printed:" >> $GITHUB_STEP_SUMMARY
           echo "-  ${{needs.job1.outputs.spiderman}}" >> $GITHUB_STEP_SUMMARY
-          echo "- $captain_america" >> $GITHUB_STEP_SUMMARY
