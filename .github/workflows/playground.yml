@@ -15,4 +15,6 @@ jobs:
       - name: Check day of the week
         if: ${{ inputs.day-of-the-week == 'Monday'}}
         run: |
-          echo "Hello ${{env.MY_NAME}}, today is ${{inputs.day-of-the-week}}"
+          echo "Hello ${{env.MY_NAME}}, today is ${{inputs.day-of-the-week}}" 
+          # env.MY_NAME is a context, a way of referecing something
+          echo ${{job.status}}
