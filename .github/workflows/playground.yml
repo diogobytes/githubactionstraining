@@ -6,6 +6,8 @@ on:
         description: "Which day is today?"
         default: "Sunday"
         required: true
+env:
+  MY_NAME: "Diogo"
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -13,4 +15,4 @@ jobs:
       - name: Check day of the week
         if: ${{ inputs.day-of-the-week == 'Monday'}}
         run: |
-          echo "Today is ${{inputs.day-of-the-week}}"
+          echo "Hello $MY_NAME Today is ${{inputs.day-of-the-week}}"
