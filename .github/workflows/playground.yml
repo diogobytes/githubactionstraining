@@ -10,7 +10,7 @@ env:
   MY_NAME: "Diogo"
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+
 jobs:
   job1:
     runs-on: ubuntu-latest
