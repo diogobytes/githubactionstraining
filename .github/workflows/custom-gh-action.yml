@@ -1,0 +1,11 @@
+name: Use my github action
+on: [workflow_dispatch]
+jobs:
+  run-custom-gh-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy my custom GH action
+        uses: './github/actions/my-custom-gh'
+        with:
+          who-to-greet: "Diogo"
+
