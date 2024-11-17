@@ -7,7 +7,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: Deploy my custom GH action
-        uses: './github/actions/my-custom-gh'
+        uses: './.github/actions/my-custom-gh'
         with:
           who-to-greet: "Diogo"
 
