@@ -9,5 +9,5 @@ jobs:
       - name: Deploy my custom GH action
         uses: './.github/actions/my-custom-gh'
         with:
-          who-to-greet: "Diogo"
+          who-to-greet: "John"
 
