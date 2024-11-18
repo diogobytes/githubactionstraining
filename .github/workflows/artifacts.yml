@@ -15,6 +15,7 @@ jobs:
         with:
           name: homework_pre
           path: math-homework.txt
+          retention-days: 1
 
   job_2:
     name: Print the result of job 1 
