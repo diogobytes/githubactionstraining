@@ -1,0 +1,22 @@
+name: 'Hello composite action'
+description: 'This runs a composite action'
+inputs:
+  who-to-greet:
+    description: 'The person you want to greet'
+    required: true
+    default: 'World'
+  
+runs:
+  using: composite
+  steps:
+  - name: Set  greeting
+    run: echo 'Hello $INPUT_GREET '
+    env:
+      INPUT_GREET: ${{ inputs.who-to-greet }}
+  - name: Give you my favorite number
+    run: echo 'My favorite number is ⓫.'
+  - name: Favorite Pet
+    run: echo 'I love dogs! 🐶'
+  - name: Favorite book
+    run: book.sh
+    shell: bash
