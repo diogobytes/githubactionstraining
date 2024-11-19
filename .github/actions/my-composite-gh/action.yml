@@ -10,10 +10,8 @@ runs:
   using: composite
   steps:
   - name: Set  greeting
-    run: echo 'Hello $INPUT_GREET'
+    run: echo 'Hello ${{inputs.who-to-greet}}'
     shell: bash
-    env:
-      INPUT_GREET: ${{ inputs.who-to-greet }}
   - name: Give you my favorite number
     run: echo 'My favorite number is ⓫.'
     shell: bash
