@@ -4,7 +4,7 @@ jobs:
     use-reusable-workflow:
         uses: ./.github/workflows/called-workflow.yml
         with:
-            who-to-greet: 'Johnny'
+            who-to-greet: 'Diogo Filipe'
         secrets:
-            token: ${{ secrets.MY_SECRET }}
+            token: ${{ secrets.GITHUB_TOKEN }}
             
