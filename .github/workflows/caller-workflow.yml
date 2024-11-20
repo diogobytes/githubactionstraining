@@ -6,5 +6,5 @@ jobs:
         with:
             who-to-greet: 'Diogo Filipe'
         secrets:
-            token: inherit
+            token: ${{ secrets.GITHUB_TOKEN }}
             
