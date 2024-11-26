@@ -6,5 +6,8 @@ jobs:
     steps:
       - name: check if contains
         if: contains('Hello World','llo')
-        run: echo "Hello world "
+        run: echo "Hello world"
+      - name: check endswith
+        if: endsWith('Spider man','man')
+        run: echo "Hello Peter Parker! 🕸️"
           
