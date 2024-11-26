@@ -3,11 +3,11 @@ on: [workflow_dispatch]
 jobs:
   job1:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: './scripts'
+        shell: bash
+
     steps:
-      - name: check if contains
-        if: contains('Hello World','llo')
-        run: echo "Hello world"
-      - name: check endswith
-        if: endsWith('Spider man','man')
-        run: echo "Hello Peter Parker! 🕸️"
-          
+      - name: run my script
+        run: './main.sh'
