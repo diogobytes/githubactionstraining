@@ -5,9 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 'scripts'
         shell: bash
 
     steps:
       - name: run my script
-        run: './main.sh'
+        run: 'scripts/main.sh'
