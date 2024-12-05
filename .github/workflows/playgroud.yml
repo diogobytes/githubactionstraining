@@ -7,5 +7,7 @@ jobs:
       NAME: "Hello Diogo"
     steps:
       - name: greeting name
-        run: -|
+        run: |
           echo $NAME
+        env:
+          NAME: "Hello Joao"
