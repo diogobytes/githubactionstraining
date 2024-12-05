@@ -5,12 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NAME: "Hello Diogo"
-    defaults:
-      run:
-        shell: bash
     steps:
-      - name: run my script
-        run: 'scripts/main.sh'
       - name: greeting name
         run: -|
           echo $NAME
