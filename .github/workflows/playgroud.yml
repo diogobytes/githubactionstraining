@@ -3,7 +3,7 @@ env:
   NAME: ‘My Action‘
 on:
   push:
-    branches: [ “main“ ]
+    branches: [ main ]
 jobs:
   build:
     env:
