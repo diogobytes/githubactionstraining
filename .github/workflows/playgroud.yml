@@ -9,7 +9,7 @@ jobs:
       NAME: 'My Action 2'
     runs-on: ubuntu-latest
     steps:
-    - name: Print name
+    - name: ${{ 'name'}}
       run: echo "$NAME"
       env:
         NAME: 'My Action 3'
